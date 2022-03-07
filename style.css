@@ -147,13 +147,14 @@ ul.linguagens {
     cursor: pointer;
 }
 
-.title {
+#title {
     position: absolute;
-    left: 26%;
+    left: 0%;
     top: 38%;
+    text-align: center;
     color: var(--color-text);
     height: 120px;
-    width: 880px;
+    width: 100%;
 
     font-weight: 600;
     font-size: 6rem;
