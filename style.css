@@ -9,6 +9,7 @@
 }
 
 body {
+    padding-bottom: 4rem;
     --color: #131313;
     --color2: rgb(212, 212, 212);
     --color-text: #131313;
@@ -34,7 +35,11 @@ body.dark {
 /* Barra de Navegação */
 
 nav {
+    position: sticky;
+    top: 0;
     max-height: 3rem;
+    background-color: var(--background-color);
+    padding: 20px;
 }
 
 nav ul {
@@ -43,8 +48,6 @@ nav ul {
     justify-content: center;
     list-style: none;
     gap: 16px;
-    padding-right: 16px;
-    margin-top: 16px;
 }
 
 a:visited {
@@ -64,9 +67,6 @@ a {
 
 section {
     color: var(--color-text);
-
-    max-height: calc(100vh - 5rem);
-    overflow-y: auto;
     display: none;
     width: clamp(200px, 70vw, 800px);
     margin: 100px auto 0;
@@ -80,7 +80,7 @@ section.active {
 .job h3, section h2 {
     font-size: 40px;
     font-weight: 300;
-    position: relative;
+    position: static;
 }
 
 p {
@@ -93,11 +93,12 @@ h3 {
     font-weight: 400;
 }
 
-ul {
+section ul {
     margin-top: 16px;
+    list-style: none;
 }
 
-li {
+section li {
     margin-top: 4px;
 }
 
@@ -105,43 +106,31 @@ ul.linguagens {
     display: flex;
     flex-flow: row wrap;
     justify-content: left;
+    margin-left: 24px;
+    gap: 40px;
+    list-style: disc;
 }
 
-
-.asp {
-    list-style: circle;
-}
-
-
-.linguagens li {
-    margin-left: 6%;
-}
 
 .line {
-    position: relative;
-    left: 0;
-    margin-top: 28px;
-    margin-bottom: 28px;
+    margin: 24px 0;
     height: 8px;
     background-color: var(--color);
 }
 
 .lineTwo {
-    position: relative;
-    left: 0;
-    margin-top: 28px;
-    margin-bottom: 28px;
+    margin: 24px 0;
     height: 1px;
     background-color: var(--color2);
 }
 
 
 #darkmodeLabel {
-    left: 18px;
-    top: 17px;
+    left: 16px;
+    top: 16px;
     position: absolute;
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
     background-color: var(--color);
     border-radius: 50%;
     cursor: pointer;
@@ -149,13 +138,12 @@ ul.linguagens {
 
 #title {
     position: absolute;
-    left: 0%;
-    top: 38%;
-    text-align: center;
+    inset: 0;
     color: var(--color-text);
-    height: 120px;
-    width: 100%;
-
+    display: grid;
+    place-items: center;
+    margin-top: -2em;
     font-weight: 600;
     font-size: 6rem;
+    pointer-events: none;
 }
