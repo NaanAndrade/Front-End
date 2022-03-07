@@ -1,0 +1,159 @@
+/* Antecipação da Página */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Montserrat:wght@200;300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    --color: #131313;
+    --color2: rgb(212, 212, 212);
+    --color-text: #131313;
+    --background-color: #fafafa;
+
+    background: var(--background-color);
+
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+    scroll-behavior: smooth;
+
+    font-weight: 200;
+}
+
+body.dark {
+    --color: #fafafa;
+    --color2: rgb(219, 219, 219);
+    --color-text: #fafafa;
+    --background-color: #131313;
+}
+
+/* Barra de Navegação */
+
+nav {
+    max-height: 3rem;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 16px;
+    padding-right: 16px;
+    margin-top: 16px;
+}
+
+a:visited {
+    color: var(--color)
+}
+
+a:hover {
+    color: #ecbe5b;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Barra de Navegação */
+
+section {
+    color: var(--color-text);
+
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    display: none;
+    width: clamp(200px, 70vw, 800px);
+    margin: 100px auto 0;
+
+}
+
+section.active {
+    display: block;
+}
+
+.job h3, section h2 {
+    font-size: 40px;
+    font-weight: 300;
+    position: relative;
+}
+
+p {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+ul {
+    margin-top: 16px;
+}
+
+li {
+    margin-top: 4px;
+}
+
+ul.linguagens {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+
+.asp {
+    list-style: circle;
+}
+
+
+.linguagens li {
+    margin-left: 6%;
+}
+
+.line {
+    position: relative;
+    left: 0;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    height: 8px;
+    background-color: var(--color);
+}
+
+.lineTwo {
+    position: relative;
+    left: 0;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    height: 1px;
+    background-color: var(--color2);
+}
+
+
+#darkmodeLabel {
+    left: 18px;
+    top: 17px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    left: 26%;
+    top: 38%;
+    color: var(--color-text);
+    height: 120px;
+    width: 880px;
+
+    font-weight: 600;
+    font-size: 6rem;
+}
